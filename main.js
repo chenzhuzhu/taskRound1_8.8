@@ -13,32 +13,21 @@ function resolve(inputs){
             }
       }
       
-      let dividend;
-      while (k!=1){
-            for(var ccc of prime_number_arr){
-                  dividend =ccc;       
+      for(let dividend of prime_number_arr){
+            while(k%dividend==0){
                   k=k/dividend
-                  console.log(k)
-                  if
-                  temp_arr.push(dividend);             
-                  continue; 
-                  
-             }
-             
+                  temp_arr.push(dividend);
+            }
+            if(k/dividend==1){
+                  continue;
+            }
+      }      
             
-            
-      }         
-            
-              return temp_arr; 
-     
-      }
-      
-      
-      
+              return temp_arr;       
          
 }
 
-//判断num是否为质数，如果是质数，返回trforue，否则返回false
+//判断num是否为质数，如果是质数，返回true，否则返回false
 function is_prime_number(num){
       let new_arr=[];
       for(let i =1;i<=num;i++){
